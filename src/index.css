@@ -18,7 +18,7 @@ code {
 
 @layer components {
   .active {
-    @apply text-orange-500 lg:text-white lg:hover:text-white transition-all lg:bg-orange-500 lg:hover:bg-orange-600;
+    @apply text-orange-500 file: lg:text-white lg:hover:text-white transition-all lg:bg-orange-500 lg:hover:bg-orange-600;
   }
 }
 @tailwind utilities;
