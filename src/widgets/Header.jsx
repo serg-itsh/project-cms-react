@@ -1,11 +1,15 @@
+import { useState } from "react";
+
 import { NavLink, Link } from "react-router-dom";
 import Container from "../components/common/Conteiner";
+import ToggleMenu from "../components/features/ToggleMenu";
+
 const Header = () => {
+  const [isShown, setIsShown] = useState(false);
   return (
-    // fixed w-full z-10  bg-blue-800 bg-gradient-to-b from-[#1E40AF] via-[#1E40AF] to-[#0E1D82]
-    //
+   
     <header
-      class={` sticky top-0  w-full z-[10] bg-black/30 backdrop-blur-[10px]  transition duration-[1000ms] ease-in-out 
+      className={` bg-black/10 backdrop-blur-[10px]  transition duration-[1000ms] ease-in-out 
      
 
 
@@ -13,52 +17,64 @@ const Header = () => {
      
      `}
     >
-      <Container class="">
-        {/* lg:justify-normal */}
-        <div class="flex items-center justify-between  lg:justify-between  py-4 ">
+      <Container className="">
+       
+        <div className="py-5 lg:py-3  flex items-center justify-between  lg:justify-between   border-b border-black ">
           {/*  */}
           <Link
             to="/"
-            class=" w-[200px] h-auto  hover:scale-95 transition-all lg:w-[125px]"
+            className=" w-[200px] h-auto  hover:scale-95 transition-all lg:w-[125px]"
           >
-            <span class="text-2xl text-white font-bold  ">TEST</span>
-            {/* <img width={118} height={30} src={logo} alt="logo" /> */}
+           
+            <img
+              className="w-[150px] h-auto"
+              width={118}
+              height={30}
+              src="https://support.backendless.com/uploads/default/original/2X/4/4ade7ca8e305b50307d71ad1474aed2c6bad783a.png"
+              alt="Backendless"
+            />
           </Link>
 
-          <div class={`  lg:block  `}>
-            {/* lg:ml-10  xl:ml-60*/}
-            <div class="  flex flex-col lg:flex-row  gap-5 xl:gap-8 text-[12px]  lg:text-[11px] text-white  uppercase">
-              {/* <NavLink
+          <div className={`  lg:block ${isShown ? "block absolute top-[72px] left-0 w-full h-screen bg-bgDark z-[5] p-10 transition-all text-[20px] text-white/70  " : "hidden"} `} >
+           
+            <div
+              className="  flex flex-col font-[700]  lg:flex-row  gap-5 xl:gap-8 text-[12px]  lg:text-[11px]  uppercase"
+              onClick={() => {
+                if (window.innerWidth < 768) {
+                  setIsShown(!isShown);
+                 
+                }
+              }}
+            >
+              <NavLink
                 to="/"
-                class="text-white  hover:text-white/50 transition-all max-w-max inlin-block"
+                className="p-2 px-4 rounded  transition-all max-w-max inlin-block"
               >
                 HOME
-              </NavLink> */}
-              <NavLink
-                to="/about"
-                class="text-white hover:text-white/50 transition-all max-w-max inlin-block"
-              >
-               About
               </NavLink>
               <NavLink
-                to="/products"
-                class="text-white hover:text-white/50 transition-all max-w-max inlin-block"
+                to="tabs/dummyTable"
+                className="p-2 px-4 rounded  transition-all max-w-max inlin-block"
               >
-              Products
+                Table
               </NavLink>
-              
-
-              {/* <NavLink to="/personal_office" class=" hover:text-white/50 transition-all">
-             
-                Персональний кабінет
-              
-            </NavLink> */}
+              <NavLink
+                to="tabs/dummyChart"
+                className="p-2 px-4 rounded  transition-all max-w-max inlin-block"
+              >
+                Chart
+              </NavLink>
+              <NavLink
+                to="tabs/dummyList"
+                className="p-2 px-4 rounded  transition-all max-w-max inlin-block"
+              >
+                List
+              </NavLink>
             </div>
           </div>
 
-          <div class="flex items-center  lg:hidden">
-            {/* <ToggleTheme iconClass="w-6 h-6" /> */}
-            {/* <ToggleMenu iconClass="w-6 h-6" /> */}
+          <div className="flex items-center  lg:hidden">
+            <ToggleMenu setIsShown={setIsShown} isShown={isShown} />
           </div>
         </div>
       </Container>

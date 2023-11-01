@@ -15,4 +15,10 @@ code {
 
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .active {
+    @apply text-orange-500 lg:text-white lg:hover:text-white transition-all lg:bg-orange-500 lg:hover:bg-orange-600;
+  }
+}
 @tailwind utilities;

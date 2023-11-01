@@ -1,16 +1,11 @@
-// import { Slot, component$ } from "@builder.io/qwik";
-import clsx from "clsx";
-// import { Children } from "react";
 
-// type ContainerProps = {
-//   class?: string | undefined;
-//   padding?: "normal" | "small";
-// };
+import clsx from "clsx";
+
 
 const Container = ({ class: className, padding = "normal", children }) => {
     return (
       <div
-        class={clsx(
+        className={clsx(
           "mx-auto max-w-[1080px] px-[20px] lg:px-7",
           padding === "small" && "xl:px-10",
           padding === "normal" && "xl:px-[0px]",
