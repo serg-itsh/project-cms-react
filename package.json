@@ -1,7 +1,7 @@
 {
   "name": "project-cms-react",
   "version": "0.1.0",
-  "private": true,
+  
   "main": "index.js",
   "homepage": "https://github.com/serg-itsh/project-cms-react.git",
   "dependencies": {
