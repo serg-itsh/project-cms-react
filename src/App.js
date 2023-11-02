@@ -13,7 +13,7 @@ import Footer from "./widgets/Footer";
 import tabsData from "./tabs.json";
 
 const tabs = tabsData;
-console.log(tabs[0].path);
+
 
 function App() {
   return (
@@ -22,29 +22,8 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* {tabs.map((tab) => (
-            // <Route
-            //   key={tab.id}
-            //   path={`/${tab.id}`}
-            //   // component={lazy(() => import(`./tabs/${tab.path}`))}
-            //   component={() => import(`./${tab.path}`)}
-            //   className="active"
-            // />
-       
-
-            <Route
-            key={tab.id}
-            path={`/${tab.id}`}
-           
-            element={ 
-              <Suspense fallback={<div>Loading...</div>}>
-               {lazy(() => import(`./${tab.path}`))}
-            
-              </Suspense>
-            }
-          />
-          ))} */}
+          <Route path="/project-cms-react" element={<Home />} />
+         
         
           <Route path={tabs[0].path} element={<DummyTable />} />
           <Route path={tabs[1].path} element={<DummyChart />} />

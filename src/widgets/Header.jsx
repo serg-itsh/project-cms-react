@@ -22,7 +22,7 @@ const Header = () => {
         <div className="py-5 lg:py-3  flex items-center justify-between  lg:justify-between   border-b border-black ">
           {/*  */}
           <Link
-            to="/"
+            to="/project-cms-react"
             className=" w-[200px] h-auto  hover:scale-95 transition-all lg:w-[125px]"
           >
            
@@ -39,12 +39,12 @@ const Header = () => {
            
             <div
               className="  flex flex-col font-[700]  lg:flex-row  gap-5 xl:gap-8 text-[12px]  lg:text-[11px]  uppercase"
-              onClick={() => {
-                if (window.innerWidth < 768) {
-                  setIsShown(!isShown);
+              // onClick={() => {
+              //   if (window.innerWidth < 768) {
+              //     setIsShown(!isShown);
                  
-                }
-              }}
+              //   }
+              // }}
             >
               <NavLink
                 to="/"
