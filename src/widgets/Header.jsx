@@ -11,9 +11,6 @@ const Header = () => {
     <header
       className={` bg-black/10 backdrop-blur-[10px]  transition duration-[1000ms] ease-in-out 
      
-
-
-     
      
      `}
     >
