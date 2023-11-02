@@ -2,7 +2,7 @@
   "name": "project-cms-react",
   "version": "0.1.0",
   "main": "index.js",
-  "homepage": "https://serg-itsh.github.io/gh-pages-demo",
+  "homepage": "https://serg-itsh.io/project-cms-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "rm -rf build && npm run build",
-    "deploy": "gh-pages -d build"
+    "lint:js": "eslint src/**/*.{js,jsx}"
+   
   },
   "eslintConfig": {
     "extends": [
