@@ -22,7 +22,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/project-cms-react" element={<Home />} />
+          <Route path="/" element={<Home />} />
          
         
           <Route path={tabs[0].path} element={<DummyTable />} />
