@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "main": "index.js",
   "homepage": "https://serg-itsh.github.io/project-cms-react/",
-  
-
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run save-json-api && shx cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:js": "eslint src/**/*.{js,jsx}",
@@ -45,6 +43,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
+    "shx": "^0.3.4",
     "tailwindcss": "^3.3.5"
   }
 }
