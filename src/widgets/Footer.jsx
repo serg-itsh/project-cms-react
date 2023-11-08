@@ -28,18 +28,18 @@ const Footer = () => {
               
               <Link
                 to="/"
-                className="  text-white/50 hover:text-white cursor-pointer transition-all "
+                className="uppercase  text-white/50 hover:text-white cursor-pointer transition-all "
                 >
                 HOME
                 </Link>
              
-              <Link  to="tabs/dummyTable.js" className="  text-white/50 hover:text-white cursor-pointer transition-all ">
+              <Link  to="tabs/dummyTable.js" className="uppercase  text-white/50 hover:text-white cursor-pointer transition-all ">
                 TABLE
               </Link>
-              <Link to="tabs/dummyChart.js"  className="  text-white/50 hover:text-white cursor-pointer transition-all ">
+              <Link to="tabs/dummyChart.js"  className="uppercase  text-white/50 hover:text-white cursor-pointer transition-all ">
                 CHART
               </Link>
-              <Link  to="tabs/dummyList.js"  className="  text-white/50 hover:text-white cursor-pointer transition-all ">
+              <Link  to="tabs/dummyList.js"  className="uppercase  text-white/50 hover:text-white cursor-pointer transition-all ">
               List
               </Link>
             </div>
